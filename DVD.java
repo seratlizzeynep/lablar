@@ -1,19 +1,19 @@
 package labson;
 
-public class Book implements LibraryItem {
+public class DVD implements LibraryItem {
     private String title;
-    private String author;
+    private String director;
     private boolean available;
 
-    public Book(String title, String author, boolean available) {
+    public DVD(String title, String director, boolean available) {
         this.title = title;
-        this.author = author;
+        this.director = director;
         this.available = available;
     }
 
     @Override
     public String getItemDetails() {
-        return "Book: " + title + " by " + author + " - Available: " + available;
+        return "DVD: " + title + " directed by " + director + " - Available: " + available;
     }
 
     @Override
@@ -21,4 +21,3 @@ public class Book implements LibraryItem {
         return available;
     }
 }
-

@@ -1,13 +1,18 @@
-package laberen;
+package labson;
 
 public class Main {
     public static void main(String[] args) {
-        ElectronicStore store = new ElectronicStore(10, 10);
-        store.addItem(new Phone("iPhone", "15 Pro ", 1024, true));
-        store.addItem(new Phone("Samsung Galaxy", "S24+", 256, true));
-        store.addItem(new Tv("Samsung", "65Q70C", 65, true));
-        store.addItem(new Tv("Philips", "77OLED808", 77, true));
+        Library library = new Library();
+    
+        library.addItem(new Book("1984", "George Orwell", true));
+        library.addItem(new Book("Of Mice and Men", "John Stainbeck", true));
+        library.addItem(new Book("Hamlet", "William Shakespeare", true));
         
-        store.listItems();
+        
+        library.addItem(new DVD("Inception", "Christopher Nolan", true));
+        library.addItem(new DVD("Oppenheimer", "Christopher Nolan", true));
+        
+       
+        library.listItems();
     }
 }
